@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Distsys.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NTNU TIØ4258 Tekled Teknologiledelse interaktive eksamener eksamensoppgaver LF">
+    <meta name="author" content="Tomas Albertsen Fagerbekk">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      #question {
+        font-weight: bold;
+      }
+
+      .hero-unit {
+        font-size: 1.1em;
+        line-height: 1.5em;
+      }
+
+      .hover{
+        background-color: #E2E2E2
+      }
+
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+      <div class="span2">
+        <label class="checkbox" id="2012">
+          <input type="checkbox" checked>2012
+        </label>
+        <label class="checkbox" id="2011">
+          <input type="checkbox" checked>2011
+        </label>
+        <label class="checkbox" id="2008">
+          <input type="checkbox">2008
+        </label>
+        <label class="checkbox" id="2006">
+          <input type="checkbox">2006
+        </label>
+      </div>
+      <div class="span10">
+        <div id="chapter">chapter</div>
+        <div class="hero-unit ai2" onclick="submitAnswer()">
+          <p id="question">Spørsmål</p>
+          <p id="answer">Svar</p>
+        </div>
+    
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="data/data_distsys_exam.js"></script> <!-- loading questions -->
+    <script src="js/TDT4190.js"></script>
+
+  </body>
+</html>
