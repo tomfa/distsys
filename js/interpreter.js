@@ -45,5 +45,4 @@ function finished() {
 
  $(document).ready(function() {
     loadNextQuestion();
-);
  });
