@@ -45,23 +45,5 @@ function finished() {
 
  $(document).ready(function() {
     loadNextQuestion();
-
-    $(":checkbox").click(
-    function () {
-        var value = false;
-        if ($(this).is(':checked'))
-            value = true;
-        console.log(value);
-        if ($(this).parent().attr('id') == 2006){
-            E2006 = value;
-            alert("E2006 " + value);
-        }
-        else if ($(this).parent().attr('id') == 2008)
-            E2008 = value;
-        else if ($(this).parent().attr('id') == 2011)
-            E2011 = value;
-        else if ($(this).parent().attr('id') == 2012)
-            E2012 = value;
-    }
 );
  });
