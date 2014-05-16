@@ -59,19 +59,8 @@
   <body>
 
     <div class="container-fluid">
-      <div class="span2">
-        <label class="checkbox" id="2012">
-          <input type="checkbox" checked>2012
-        </label>
-        <label class="checkbox" id="2011">
-          <input type="checkbox" checked>2011
-        </label>
-        <label class="checkbox" id="2008">
-          <input type="checkbox">2008
-        </label>
-        <label class="checkbox" id="2006">
-          <input type="checkbox">2006
-        </label>
+      <div class="span2" id="chapter-selector">
+        
       </div>
       <div class="span10">
         <div id="chapter">chapter</div>
@@ -82,12 +71,15 @@
     
     </div><!--/.fluid-container-->
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery-1.9.1.min.js"></script>
-    <script src="data/data_distsys_exam.js"></script> <!-- loading questions -->
-    <script src="js/TDT4190.js"></script>
+    <script src="data/data.js"></script> <!-- loading questions -->
+    <script type="text/javascript">
+      for (var i = 0; i < chapters.length; i++) {
+        $('#chapter-selector').append('<label class="checkbox"><span class="label">' + chapters[i] + '</span><input type="checkbox" checked></label>');
+      };
+    </script>
+    <script src="js/interpreter.js"></script>
+    <script src="/js/ga.js"></script>
 
   </body>
 </html>

@@ -2,11 +2,6 @@ var i = -1;  // current questions
 var answered = false;
 
 shuffle(questions);
-var E2006 = false;
-var E2008 = false;
-var E2011 = true;
-var E2012 = true;
-var valid = false;
 
 // Shuffles array
 function shuffle(o){
@@ -33,15 +28,9 @@ function loadNextQuestion() {
             finished();
             return;
         }
-        valid = true;
-        if (!E2011 && (questions[i].chapter == "Eksamen 2011:")){
-            valid = false; }
-        if (!E2012 && (questions[i].chapter == "Eksamen 2012:")){
-            valid = false; }
-        if (!E2008 && (questions[i].chapter == "Eksamen 2008:")){
-            valid = false; }
-        if (!E2006 && (questions[i].chapter == "Eksamen 2006:")){
-            valid = false; }
+        valid = false;
+        if ($("label:contains(" + questions[i].chapter + ")").first().find(':checkbox').is(':checked')) {
+            valid = true; }
     }
     $('#question').html(questions[i].question);
     $('#chapter').html(questions[i].chapter);
@@ -62,6 +51,7 @@ function finished() {
         var value = false;
         if ($(this).is(':checked'))
             value = true;
+        console.log(value);
         if ($(this).parent().attr('id') == 2006){
             E2006 = value;
             alert("E2006 " + value);
